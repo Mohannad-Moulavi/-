@@ -4,9 +4,28 @@
         <link rel="manifest" href="manifest.json">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
- <iframe src="https://noon-valqalam.com/" frameborder="0" width="100%" height="100%"></iframe>
-    </body>
+   <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
+</head>
+<body>
+<!-- Create an iframe element with the src attribute set to the URL of the website to view -->
+<iframe src="https://noon-valqalam.com/"></iframe>
+</body>
     <script>
         window.addEventListener('load', () => {
           registerSW();

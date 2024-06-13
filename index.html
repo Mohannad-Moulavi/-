@@ -2,16 +2,27 @@
     <head>
         <title>نون والقلم</title>
         <link rel="manifest" href="manifest.json">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-</head>
-<body>
-<iframe src="https://noon-valqalam.com" name="iframe_a">
-<p>Your browser does not support iframes.</p>
-</iframe>
+    <body>
+       <div id="site-container"></div>
+    </body>
+   
 
-<a href="https://noon-valqalam.com" target="
-     </body>
+<script>
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://noon-valqalam.com', true);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      document.getElementById('site-container').innerHTML = xhr.responseText;
+    }
+  };
+  xhr.send();
+</script>
+    <script>
+        window.addEventListener('load', () => {
+          registerSW();
+        });
+     
         // Register the Service Worker
         async function registerSW() {
           if ('serviceWorker' in navigator) {

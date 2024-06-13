@@ -4,20 +4,11 @@
         <link rel="manifest" href="manifest.json">
     </head>
     <body>
-       <div id="site-container"></div>
+      
     </body>
    
 
-<script>
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://noon-valqalam.com', true);
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      document.getElementById('site-container').innerHTML = xhr.responseText;
-    }
-  };
-  xhr.send();
-</script>
+
     <script>
         window.addEventListener('load', () => {
           registerSW();

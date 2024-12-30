@@ -1,181 +1,240 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-::-webkit-scrollbar
-{
-    width: 0;
-}
-body
-{
-    font-family: sans-serif;
-    background: #111728;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.container{
-    width: 100%;
-}
-h1
-{
-    margin: 20px 0px;
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-}
-.scrollBox
-{
-    float: right;
-    width: 400px;
-    height: 85vh;
-    margin: 20px 5px;
-    margin-top: 0px;
-    overflow-y: scroll;
-    background: #fff;
-    border-radius: 5px;
-}
-.container .video
-{
-    float: left;
-    width: 860px;
-    height: 100%;
-    margin: 25px 20px;
-    border-radius: 10px;
-}
-video
-{
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    outline: none;
-}
-.box
-{
-    overflow: hidden;
-    max-width: 400px;
-    margin: 10px 10px;
-    display: inline-block;
-    position: relative;
-    border-radius: 10px;
-}
-.box:hover
-{
-    box-shadow: 0px 5px 30px 0px #121212;
-}
-.box img
-{
-    width: 100%;
-    display: block;
-}
-.btn
-{
-    display: inline-block;
-    text-decoration: none;
-    background:#2e8d86;
-    color: #fff;
-    padding: 0.5em 1.2em;
-    margin-top: 0.8rem;
-    margin-left: 10px;
-    position: relative;
-    transition: 0.2s ease-in-out;
-    border-radius: 3px;
-}
-.btn:hover
-{
-    box-shadow: 10px 15px 20px  0px #000000;
-    transform: scale(1.3);
-}
-h3
-{
-    color: #fff;
-    margin: 0 10px;
-}
-.box .box-content
-{
-    position: absolute;
-    top: 80%;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    text-align: center;
-    opacity: 0;
-    z-index: 2;
-    transition: all .5s ease-in-out;
-}
-.box::after
-{
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    z-index: 1;
-    transform: scaleY(0);
-    transform-origin: 100% 100%;
-    background: rgba(0, 0, 0, 0.73);
-    transition: all .3s ease-in-out;
-}
-.box:hover .box-content
-{
-    opacity: 1;
-    top: 30%;
-}
-.box:hover::after
-{
-    opacity: 1;
-    transform: scaleY(1);
+/* تنظیمات پایه */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.scrollTop
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 100000;
+body {
+  direction: rtl;
+  font-family: 'Vazir', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
-@media(max-width: 1310px){
-    .container
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        text-align: center;
-    }
+
+/* هدِر و ناوبری */
+.main-header {
+  background-color: #0d47a1; /* رنگ آبی تیره */
+  padding: 1rem;
 }
-@media(max-width: 865px){
-    .container .video
-    {
-        width: 95%;
-        float: none;
-    }
-    .container .scrollBox
-    {
-        float: none;
-    }
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-@media(max-width: 775px){
-    .container .video
-    {
-        width: 95%;
-    }
+
+.logo {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
 }
-@media(max-width: 500px){
-    .container .video
-    {
-        width: 97%;
-    }
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu li a:hover {
+  opacity: 0.8;
+}
+
+/* بخش قهرمان (Hero) */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  background: url('https://via.placeholder.com/1200x700') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+}
+
+/* بخش درباره من */
+.about-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* بخش اخبار */
+.news-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.news-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.news-item {
+  background-color: #e3f2fd; /* آبی روشن */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.news-item h3 {
+  margin-bottom: 0.5rem;
+  color: #0d47a1;
+}
+
+/* بخش جام‌ها و عملکردها */
+.achievements-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.achievements-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.achievements-list {
+  list-style-type: disc;
+  padding-right: 1.5rem; /* برای کمی فاصله از متن */
+  line-height: 1.8;
+}
+
+.achievements-list > li {
+  margin-bottom: 0.5rem;
+}
+
+/* اگر مایلید زیرلیست هم استایل متفاوت داشته باشد: */
+.achievements-list ul {
+  list-style-type: circle;
+  margin-top: 0.5rem;
+  padding-right: 1.5rem;
+}
+
+/* بخش گالری عکس‌ها */
+.gallery-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.gallery-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* بخش تماس */
+.contact-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  margin-bottom: 1.5rem;
+}
+
+#contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+#contact-form button {
+  background-color: #0d47a1;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#contact-form button:hover {
+  background-color: #093670;
+}
+
+/* فوتر */
+.main-footer {
+  background-color: #0d47a1;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.main-footer p {
+  color: #fff;
+  font-size: 0.9rem;
 }

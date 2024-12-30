@@ -1,338 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>سایت رسمی مهند مولوی</title>
 
-  <!-- 
-    - primary meta tags
-  -->
-  <title>Mohannad Moulavi</title>
-  <meta name="title" content="Wren - Perosonal Blog Website">
-  <meta name="description" content="This is a blog html template made by codewithsadee">
+  <!-- فراخوانی فایل CSS -->
+  <link rel="stylesheet" href="style.css" />
 
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <!-- فراخوانی کتابخانه EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
-  <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
-
+  <!-- (اختیاری) فراخوانی فونت فارسی. می‌توانید به سلیقه‌ی خود تغییر دهید یا فونت دیگری اضافه کنید. -->
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" type="text/css" />
 </head>
+<body>
 
-<body id="top">
-
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-
-
-      <nav class="navbar" data-navbar>
-
-        <div class="navbar-top">
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.png" width="250" height="250" alt="Wren logo">
-          </a>
-
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
-
-        <ul class="navbar-list">
-
-          <li>
-            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
-          </li>
-
-          <li>
-            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Topics</a>
-          </li>
-
-
-
-        </ul>
-
-
-
-      </nav>
-
-      <a href="Gallery.html" class="btn btn-primary">Video Gallery</a>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-      </button>
-
-    </div>
+  <!-- هدر و ناوبری -->
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="logo">مهند مولوی</div>
+      <ul class="nav-menu">
+        <li><a href="#about">درباره من</a></li>
+        <li><a href="#news">اخبار</a></li>
+        <li><a href="#achievements">جام‌ها و عملکردها</a></li> <!-- بخش جدید -->
+        <li><a href="#gallery">گالری</a></li>
+        <li><a href="#contact">ارتباط با من</a></li>
+      </ul>
+    </nav>
   </header>
 
-
-
-
-
-  <main>
-    <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="hero" id="home" aria-label="home">
-        <div class="container">
-
-          <div class="hero-content">
-
-            <p class="hero-subtitle">Hello Everyone!</p>
-
-            <h1 class="headline headline-1 section-title">
-              I’m <span class="span">Mohannad Moulavi</span>
-            </h1>
-
-            <p class="hero-text">
-              Mohannad Moulavi, a football player born on 2011/4/24, from Fars province,Evaz city, Mohannad Moulavi is a football lover who started playing football with the Naft Evaz team and has a history of being the captain of this team until now.
-
-Mohannad Moulavi's ability to play in the following positions: left/right forward - attacking midfielder/cente
-            </p>
-
-            <div class="input-wrapper">
-
-
-<a href="Gallery.html" class="btn btn-primary">Video Gallery</a>
-
-                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-            </div>
-
-          </div>
-
-          <div class="hero-banner">
-
-            <img src="./assets/images/hero-banner.png" width="327" height="490" alt="Wren Clark" class="w-100">
-
-            <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
-
-            <img src="./assets/images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
-
-          </div>
-
-          <img src="./assets/images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
-
-          <img src="./assets/images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #TOPICS
-      -->
-
-      <section class="topics" id="topics" aria-labelledby="topic-label">
-        <div class="container">
-
-          <div class="card topic-card">
-
-            <div class="card-content">
-
-              <h2 class="headline headline-2 section-title card-title" id="topic-label">
-                Gallery of Mohannad photos
-              </h2>
-
-              <p class="card-text">
-                These photos include graphic designs and awards by Mohannad Moulavi...
-              </p>
-
-              <div class="btn-group">
-                <button class="btn-icon" aria-label="previous" data-slider-prev>
-                  <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
-                </button>
-
-                <button class="btn-icon" aria-label="next" data-slider-next>
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-              </div>
-
-            </div>
-
-            <div class="slider" data-slider>
-              <ul class="slider-list" data-slider-container>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-1.png" width="507" height="618" loading="lazy" alt="Sport"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title"></span>
-
-                      <p class="slider-subtitle"> </p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-2.png" width="507" height="618" loading="lazy" alt="Travel"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title"></span>
-
-                      <p class="slider-subtitle"> </p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-3.png" width="507" height="618" loading="lazy" alt="Design"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title"></span>
-
-                      <p class="slider-subtitle"></p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-4.png" width="507" height="618" loading="lazy" alt="Movie"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title"></span>
-
-                      <p class="slider-subtitle"></p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="#" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-5.png" width="507" height="618" loading="lazy" alt="Lifestyle"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title"></span>
-
-                      <p class="slider-subtitle"></p>
-                    </div>
-
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-
-  <!-- 
-    - #FOOTER
-  -->
-
-  
-          <ul class="social-list">
-
-
-
-            <li>
-              <a href="https://instagram.com/moulavi.10" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-
-                <span class="span">Instagram</span>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
+  <!-- بخش قهرمان (Hero) -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>سایت رسمی مهند مولوی</h1>
+      <p>فوتبالیست و کاپیتان تیم نفت اوز</p>
     </div>
+  </section>
+
+  <!-- بخش درباره من -->
+  <section id="about" class="about-section">
+    <h2>درباره من</h2>
+    <div class="about-content">
+      <p>
+        مهند مولوی فوتبالیست متولد 2011/4/24 اهل استان فارس شهرستان اوز.
+        فوتبال را از تیم <strong>نفت اوز</strong> آغاز کرده و سابقه کاپیتانی این تیم را تاکنون دارد.
+        توانایی بازی در پست‌های: فوروارد چپ / راست و هافبک تهاجمی / وسط.
+      </p>
+    </div>
+  </section>
+
+  <!-- بخش آخرین اخبار -->
+  <section id="news" class="news-section">
+    <h2>آخرین اخبار</h2>
+    <div class="news-item">
+      <h3>بازی نفت اوز مقابل شمس اوز</h3>
+      <p>نتیجه نهایی ۲ بر ۱ به نفع نفت با عملکرد عالی مهند مولوی</p>
+    </div>
+  </section>
+
+  <!-- بخش جام‌ها و عملکردها -->
+  <section id="achievements" class="achievements-section">
+    <h2>جام‌ها و عملکردها</h2>
+    <div class="achievements-content">
+      <ul class="achievements-list">
+        <li>تعداد گل‌های زده در بازی رسمی: بیش از ۱۰ گل</li>
+        <li>تعداد پاس گل: بیش از ۵ پاس گل</li>
+        <li>جام‌های کسب شده:
+          <ul>
+            <li>نایب قهرمانی مسابقات زیر ۱۲ در شهرستان اوز (۱۴۰۲)</li>
+            <li>تندیس بهترین بازیکن در مسابقات (۱۴۰۲)</li>
+            <li>مقام سوم مسابقات زیر ۱۲ سال در شهرستان اوز (۱۴۰۱)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- بخش گالری عکس‌ها -->
+  <section id="gallery" class="gallery-section">
+    <h2>گالری عکس‌ها</h2>
+    <p>در این بخش می‌توانید تصاویری از بازی‌ها و تمرین‌های من را مشاهده کنید.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="عکس ۱" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="عکس ۲" />
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/400x300" alt="عکس ۳" />
+      </div>
+      <!-- در صورت نیاز، موارد بیشتر اضافه کنید -->
+    </div>
+  </section>
+
+  <!-- بخش تماس با من -->
+  <section id="contact" class="contact-section">
+    <h2>ارتباط با من</h2>
+    <p>جهت تماس مستقیم و ارسال پیام، فرم زیر را پر کنید.</p>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="from_name">نام شما</label>
+        <input type="text" name="from_name" id="from_name" required />
+      </div>
+      <div class="form-group">
+        <label for="reply_to">ایمیل شما</label>
+        <input type="email" name="reply_to" id="reply_to" required />
+      </div>
+      <div class="form-group">
+        <label for="message">پیام شما</label>
+        <textarea name="message" id="message" rows="5"></textarea>
+      </div>
+      <button type="submit">ارسال پیام</button>
+    </form>
+  </section>
+
+  <!-- فوتر سایت -->
+  <footer class="main-footer">
+    <p>© 2024 مهند مولوی. کلیه حقوق محفوظ است.</p>
   </footer>
 
-
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
-  </a>
-
-
-
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!-- 
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- فراخوانی فایل جاوااسکریپت -->
+  <script src="script.js"></script>
 
 </body>
-
 </html>

@@ -1,132 +1,24 @@
 <!DOCTYPE html>
-<html lang="fa">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>سایت رسمی مهند مولوی</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>football-website-goal</title>
+    <meta name="description" content="Lovable Generated Project" />
+    <meta name="author" content="Lovable" />
 
-  <!-- فراخوانی فایل CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <meta property="og:title" content="football-website-goal" />
+    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-  <!-- فراخوانی کتابخانه EmailJS -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
 
-  <!-- فراخوانی فونت فارسی (اختیاری) -->
-  <link 
-    href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" 
-    rel="stylesheet" 
-    type="text/css" 
-  />
-</head>
-<body>
-
-  <!-- هدر و ناوبری -->
-  <header class="main-header">
-    <nav class="navbar">
-      <div class="logo">مهند مولوی</div>
-      <ul class="nav-menu">
-        <li><a href="#about">درباره من</a></li>
-        <li><a href="#news">اخبار</a></li>
-        <li><a href="#achievements">جام‌ها و عملکردها</a></li>
-        <li><a href="#gallery">گالری</a></li>
-        <li><a href="#contact">ارتباط با من</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- بخش قهرمان (Hero) -->
-  <section class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>سایت رسمی مهند مولوی</h1>
-      <p>فوتبالیست و کاپیتان تیم نفت اوز</p>
-    </div>
-  </section>
-
-  <!-- بخش درباره من -->
-  <section id="about" class="about-section">
-    <h2>درباره من</h2>
-    <div class="about-content">
-      <p>
-        مهند مولوی فوتبالیست متولد 2011/4/24 اهل استان فارس شهرستان اوز.
-        فوتبال را از تیم <strong>نفت اوز</strong> آغاز کرده و سابقه کاپیتانی این تیم را تاکنون دارد.
-        توانایی بازی در پست‌های: فوروارد چپ / راست و هافبک تهاجمی / وسط.
-      </p>
-    </div>
-  </section>
-
-  <!-- بخش آخرین اخبار -->
-  <section id="news" class="news-section">
-    <h2>آخرین اخبار</h2>
-    <div class="news-item">
-      <h3>بازی نفت اوز مقابل شمس اوز</h3>
-      <p>نتیجه نهایی ۲ بر ۱ به نفع نفت با عملکرد عالی مهند مولوی</p>
-    </div>
-  </section>
-
-  <!-- بخش جام‌ها و عملکردها -->
-  <section id="achievements" class="achievements-section">
-    <h2>جام‌ها و عملکردها</h2>
-    <div class="achievements-content">
-      <ul class="achievements-list">
-        
-        <li>جام‌های کسب شده:
-          <ul>
-            <li>نایب قهرمانی مسابقات زیر ۱۲ در شهرستان اوز (۱۴۰۲)</li>
-            <li>تندیس بهترین بازیکن در مسابقات (۱۴۰۲)</li>
-            <li>مقام سوم مسابقات زیر ۱۲ سال در شهرستان اوز (۱۴۰۱)</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- بخش گالری عکس‌ها -->
-  <section id="gallery" class="gallery-section">
-    <h2>گالری عکس‌ها</h2>
-    <p>در این بخش می‌توانید تصاویری از بازی‌ها و تمرین‌های من را مشاهده کنید.</p>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="assets/images/topic-1.png" alt="عکس ۱" />
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/topic-4.png" alt="عکس ۲" />
-      </div>
-      <div class="gallery-item">
-        <img src="assets/images/topic-5.png" alt="عکس ۳" />
-      </div>
-      <!-- در صورت نیاز، تصاویر بیشتر اضافه کنید -->
-    </div>
-  </section>
-
-  <!-- بخش تماس با من -->
-  <section id="contact" class="contact-section">
-    <h2>ارتباط با من</h2>
-    <p>جهت تماس مستقیم و ارسال پیام، فرم زیر را پر کنید.</p>
-    <form id="contact-form">
-      <div class="form-group">
-        <label for="from_name">نام شما</label>
-        <input type="text" name="from_name" id="from_name" required />
-      </div>
-      <div class="form-group">
-        <label for="reply_to">ایمیل شما</label>
-        <input type="email" name="reply_to" id="reply_to" required />
-      </div>
-      <div class="form-group">
-        <label for="message">پیام شما</label>
-        <textarea name="message" id="message" rows="5"></textarea>
-      </div>
-      <button type="submit">ارسال پیام</button>
-    </form>
-  </section>
-
-  <!-- فوتر سایت -->
-  <footer class="main-footer">
-    <p>© 2024 مهند مولوی. کلیه حقوق محفوظ است.</p>
-  </footer>
-
-  <!-- فراخوانی فایل جاوااسکریپت -->
-  <script src="script.js"></script>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
